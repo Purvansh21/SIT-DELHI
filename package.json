@@ -1,0 +1,13 @@
+{
+  "name": "SITDELHI",
+  "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "framer-motion": "^12.6.3",
+    "react-hook-form": "^7.55.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "rollup-plugin-visualizer": "^5.14.0",
+    "terser": "^5.39.0"
+  }
+}
