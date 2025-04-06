@@ -56,9 +56,24 @@ const Hero = () => {
             muted 
             loop 
             playsInline
+            onError={(e) => {
+              console.error('Video error:', e);
+              const video = e.target as HTMLVideoElement;
+              console.log('Video error code:', video.error?.code);
+              console.log('Video error message:', video.error?.message);
+            }}
+            onLoadedData={() => console.log('Video loaded successfully')}
           >
-            <source src="/media/Hero1_1.avi" type="video/x-msvideo" />
-            <source src="/media/Hero1_1.mp4" type="video/mp4" />
+            <source 
+              src="/media/Hero1_1 (1).mp4" 
+              type="video/mp4"
+              onError={() => console.log('MP4 source failed to load')}
+            />
+            <img 
+              src="/media/about us.webp" 
+              alt="Fallback hero image"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             Your browser does not support the video tag.
           </video>
           {/* Gradient Overlay */}
