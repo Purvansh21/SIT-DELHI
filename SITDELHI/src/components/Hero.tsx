@@ -57,6 +57,7 @@ const Hero = () => {
             loop 
             playsInline
           >
+            <source src="/media/Hero1_1.avi" type="video/x-msvideo" />
             <source src="/media/Hero1_1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
