@@ -9,6 +9,11 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -27,11 +32,6 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
       },
-    },
-  },
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
